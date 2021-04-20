@@ -1,6 +1,7 @@
 import React from "react";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { View } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+
 function Icon({
   name,
   size = 40,
@@ -13,9 +14,9 @@ function Icon({
         width: size,
         height: size,
         borderRadius: size / 2,
-        backgroundColor: backgroundColor,
-        alignItems: "center",
+        backgroundColor,
         justifyContent: "center",
+        alignItems: "center",
       }}
     >
       <MaterialCommunityIcons name={name} color={iconColor} size={size * 0.5} />

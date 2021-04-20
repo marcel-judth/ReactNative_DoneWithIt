@@ -1,11 +1,11 @@
-import { useFormikContext } from "formik";
 import React from "react";
-import { View, StyleSheet } from "react-native";
-import ErrorMessage from "./ErrorMessage";
-import ImageInputList from "./ImageInputList";
+import { useFormikContext } from "formik";
 
-function AppFormImagePicker({ name }) {
-  const { setFieldValue, values, errors, touched } = useFormikContext();
+import ErrorMessage from "./ErrorMessage";
+import ImageInputList from "../ImageInputList";
+
+function FormImagePicker({ name }) {
+  const { errors, setFieldValue, touched, values } = useFormikContext();
   const imageUris = values[name];
 
   const handleAdd = (uri) => {
@@ -31,4 +31,4 @@ function AppFormImagePicker({ name }) {
   );
 }
 
-export default AppFormImagePicker;
+export default FormImagePicker;

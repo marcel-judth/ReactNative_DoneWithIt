@@ -1,8 +1,8 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
-import colors from "../../config/colors";
+import { View, StyleSheet, TouchableWithoutFeedback } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { TouchableWithoutFeedback } from "react-native-gesture-handler";
+
+import colors from "../../config/colors";
 
 function ListItemDeleteAction({ onPress }) {
   return (
@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.danger,
     width: 70,
-    height: "100%",
     justifyContent: "center",
     alignItems: "center",
   },
